@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <link rel="stylesheet" href="./plugins/headline/headline.css">
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="index.css">
+    <title>Mohammad Khalil</title>
+</head>
+<body>
+    <nav>
+        <div class="container inner">
+            <div class="logo">
+                <i class="uil uil-servers"></i>
+                IT Supporter Elev
+            </div>
+            <div>
+                <button onclick="myfun()">
+                    <i class="uil uil-print"></i>
+                    Prints
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div style="text-align:center;" class="tak">
+            <h1>Tak fordi du kontakter mig!</h1><br>
+            <p>Din mail er modtaget, jeg vil kontakte dig tilbage hurtigst muligt.</p><br>
+            <p>Denne side vil omdirigere efter <span id="timer"></span>s.</p>
+            </div>
+            <script type="text/javascript">
+            var count = 20;
+            var redirect = "index.html";
+            function countDown() {
+            if(count >= 0){
+            document.getElementById("timer").innerHTML = count--;
+            setTimeout("countDown()", 1000);
+            }else{
+            window.location.href = redirect;
+            }
+            }
+            countDown();
+            </script>
+    </section>
+</body>
+</html>
